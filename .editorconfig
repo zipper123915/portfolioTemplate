@@ -1,0 +1,10 @@
+[*]
+indent_size = 2
+indent_style = space
+end_of_line = lf
+
+[*.scss]
+indent_size = 2
+
+[*.js]
+indent_size = 4
