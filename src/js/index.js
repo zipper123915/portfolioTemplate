@@ -1,1 +1,1 @@
-import '../../.wkLayout/webpCheck';
+import '../../.wfLayout/webpCheck';

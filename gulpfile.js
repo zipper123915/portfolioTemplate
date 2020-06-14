@@ -332,7 +332,7 @@ if (!production) {
         htmlProduction,
         styleProduction,
         scriptProduction,
-        imagesDevelopment,
+        imagesProduction,
         fontsProduction,
         faviconsProduction,
         gzipProduction

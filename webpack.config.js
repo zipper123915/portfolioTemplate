@@ -26,9 +26,7 @@ module.exports = {
     
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
-                exclude: /\/node_modules/
-            })
+            new UglifyJsPlugin()
         ],
         splitChunks: {
             cacheGroups: {
@@ -48,12 +46,7 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: require.resolve('babel-loader'),
-                    query: {
-                        presets: [
-                            ['@babel/preset-env', { modules: false }]
-                        ]
-                    }
+                    loader: require.resolve('babel-loader')
                 }
             }
         ]
