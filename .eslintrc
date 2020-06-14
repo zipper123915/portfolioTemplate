@@ -1,0 +1,13 @@
+{
+  "extends": ["standard"],
+  "rules": {
+    "space-before-function-paren": "off",
+    "indent": ["error", 4],
+    "space-in-parens": "warn",
+    "quotes": ["error", "single"],
+    "semi": "off",
+    "template-curly-spacing": "off",
+    "no-trailing-spaces": "off",
+    "linebreak-style": "off"
+  }
+}
