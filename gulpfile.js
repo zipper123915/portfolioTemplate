@@ -223,45 +223,46 @@ function imagesDevelopment() {
         .pipe(browserSync.stream());
 }
 
-// function imagesProduction() {
-//     return src(path.src.img)
-//         .pipe(webp({
-//             quality: 70
-//         }))
-//         .pipe(dest(path.build.img))
-//         .pipe(src(path.src.img))
-//         .pipe(imagemin([
-//             imageminGiflossy({
-//                 optimizationLevel: 3,
-//                 optimize: 3,
-//                 lossy: 2
-//             }),
-//             imageminPngquant({
-//                 speed: 5,
-//                 quality: [0.6, 0.8]
-//             }),
-//             imageminZopfli({
-//                 more: true
-//             }),
-//             imageminMozjpeg({
-//                 progressive: true,
-//                 quality: 90
-//             }),
-//             imagemin.svgo({
-//                 plugins: [
-//                     { removeViewBox: false },
-//                     { removeUnusedNS: false },
-//                     { removeUselessStrokeAndFill: false },
-//                     { cleanupIDs: false },
-//                     { removeComments: true },
-//                     { removeEmptyAttrs: true },
-//                     { removeEmptyText: true },
-//                     { collapseGroups: true }
-//                 ]
-//             })
-//         ]))
-//         .pipe(dest(path.build.img));
-// }
+function imagesProduction() {
+    return src(path.src.img)
+        .pipe(webp({
+            quality: 70
+        }))
+        .pipe(dest(path.build.img))
+        .pipe(src(path.src.img))
+        .pipe(imagemin([
+            imageminGiflossy({
+                optimizationLevel: 3,
+                optimize: 3,
+                lossy: 2
+            }),
+            imageminPngquant({
+                speed: 5,
+                quality: [0.6, 0.8]
+            }),
+            imageminZopfli({
+                more: true
+            }),
+            imageminMozjpeg({
+                progressive: true,
+                quality: 90
+            }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: false },
+                    { removeUnusedNS: false },
+                    { removeUselessStrokeAndFill: false },
+                    { cleanupIDs: false },
+                    { removeComments: true },
+                    { removeEmptyAttrs: true },
+                    { removeEmptyText: true },
+                    { collapseGroups: true }
+                ]
+            })
+        ]))
+        .pipe(dest(path.build.img))
+        .pipe(browserSync.stream());
+}
 
 function fontsDevelopment() {
     return src(path.src.fonts)
