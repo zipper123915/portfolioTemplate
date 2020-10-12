@@ -3,7 +3,7 @@
 // html
 const ejs = require('gulp-ejs');
 const htmlMin = require('gulp-htmlmin');
-// const htmlWebp = require('gulp-webp-html');
+const htmlWebp = require('gulp-webp-html');
 const replace = require('gulp-replace');
 
 // style
@@ -153,6 +153,7 @@ function htmlProduction() {
         .pipe(replace(/\.(scss|sass)/g, '.css'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
+        .pipe(htmlWebp())
         .pipe(htmlMin({ collapseWhitespace: true }))
         .pipe(dest(path.build.html));
 }

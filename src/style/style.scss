@@ -1,1 +1,9 @@
 @import "helpers/index";
+@import "../blocks/header/header";
+@import "../blocks/hero/hero";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
