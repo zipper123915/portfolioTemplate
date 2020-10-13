@@ -1,0 +1,38 @@
+.offer {
+  padding: 45px 0;
+  background-image: #{$main-gradient};
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @extend %container;
+
+    @media #{$mobile} {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: Raleway, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: $main-text-color;
+  }
+
+  &__content {
+    @media #{$mobile} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__lead {
+    margin-top: 5px;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #615855;
+  }
+}

@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 20px 0;
+  font-family: Montserrat, sans-serif;
+  background-color: rgba(86, 86, 86, 0.6);
+
+  @media #{$tablet} {
+    padding-top: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @extend %container;
+  }
+
+  &__navbar {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    transition: transform 0.5s;
+
+    @media #{$tablet} {
+      position: fixed;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 240px;
+      height: 100vh;
+      padding: 25px;
+      background-color: $main-bg-color;
+
+      &--close {
+        transform: translateX(240px);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 14px;
+    color: $main-text-color;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-right: 3.8%;
+
+      @media #{$tablet} {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  &__nav-opener {
+    display: none;
+
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+
+  &__nav-closer {
+    display: none;
+    text-align: right;
+
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+}
