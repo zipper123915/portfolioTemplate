@@ -1,4 +1,4 @@
-import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm';
+import Glide, { Controls, Swipe } from '@glidejs/glide/dist/glide.modular.esm';
 
 const hero = document.querySelector('.hero');
 
@@ -11,4 +11,4 @@ glide.on('move', () => {
     hero.style.backgroundImage = `url("images/hero-bg-${index}.png")`;
 })
 
-glide.mount({ Controls });
+glide.mount({ Controls, Swipe });

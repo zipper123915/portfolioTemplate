@@ -1,10 +1,15 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 10;
   padding-top: 40px;
+  font-family: Montserrat, sans-serif;
+
+  @media #{$tablet} {
+    padding-top: 10px;
+  }
 
   &__inner {
     display: flex;
@@ -19,6 +24,23 @@
     flex-grow: 1;
     flex-shrink: 1;
     justify-content: flex-end;
+    transition: transform 0.5s;
+
+    @media #{$tablet} {
+      position: fixed;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 240px;
+      height: 100vh;
+      padding: 25px;
+      background-color: $main-bg-color;
+
+      &--close {
+        transform: translateX(240px);
+      }
+    }
   }
 
   &__link {
@@ -30,6 +52,27 @@
 
     &:not(:last-child) {
       margin-right: 3.8%;
+
+      @media #{$tablet} {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  &__nav-opener {
+    display: none;
+
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+
+  &__nav-closer {
+    display: none;
+    text-align: right;
+
+    @media #{$tablet} {
+      display: block;
     }
   }
 }

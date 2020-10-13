@@ -3,6 +3,8 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
   background: fixed no-repeat center/cover;
 
   &__overlay {
@@ -32,6 +34,14 @@
     border: none;
     transform: translateY(-50%);
 
+    @media #{$mobile} {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
     &--right {
       right: 7%;
       left: unset;
@@ -51,6 +61,10 @@
     height: 15px;
     background-color: transparent;
     border: 2px solid #d3c1ad;
+  }
+
+  &__nav-closer {
+    color: $accent-color;
   }
 
   &__bullet {

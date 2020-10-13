@@ -22,11 +22,7 @@ const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 
 // images
-const imagemin = require('gulp-imagemin');
-const imageminPngquant = require('imagemin-pngquant');
-const imageminZopfli = require('imagemin-zopfli');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminGiflossy = require('imagemin-giflossy');
+const imagemin = require('gulp-image');
 const webp = require('gulp-webp');
 const favicons = require('gulp-favicons');
 
@@ -182,19 +178,19 @@ function styleProduction() {
             outputStyle: 'expanded'
         }))
         .pipe(replace(/(\.\.\/)+/g, '../'))
-        .pipe(styleWebp())
         .pipe(styleMediaGroup())
         .pipe(autoprefixer({
             cascade: false,
             grid: true
         }))
         .pipe(styleMin())
-        .pipe(unuseStyle({
-            html: ['dist/*.html']
-        }))
+        // .pipe(unuseStyle({
+        //     html: './index.html'
+        // }))
         .pipe(rename({
             suffix: '.min'
         }))
+        .pipe(styleWebp({}))
         .pipe(dest(path.build.style));
 }
 
@@ -226,41 +222,23 @@ function imagesDevelopment() {
 
 function imagesProduction() {
     return src(path.src.img)
+        .pipe(changed(path.build.img, { extension: '.{jpg|png|jpeg|gif|svg}' }))
         .pipe(webp({
             quality: 70
         }))
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
-        .pipe(imagemin([
-            imageminGiflossy({
-                optimizationLevel: 3,
-                optimize: 3,
-                lossy: 2
-            }),
-            imageminPngquant({
-                speed: 5,
-                quality: [0.6, 0.8]
-            }),
-            imageminZopfli({
-                more: true
-            }),
-            imageminMozjpeg({
-                progressive: true,
-                quality: 90
-            }),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: false },
-                    { removeUnusedNS: false },
-                    { removeUselessStrokeAndFill: false },
-                    { cleanupIDs: false },
-                    { removeComments: true },
-                    { removeEmptyAttrs: true },
-                    { removeEmptyText: true },
-                    { collapseGroups: true }
-                ]
-            })
-        ]))
+        .pipe(imagemin({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10,
+            quiet: true // defaults to false
+        }))
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream());
 }

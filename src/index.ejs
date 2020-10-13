@@ -1,16 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/style.scss">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.scss">
+  <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-300.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat/montserrat-v15-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-500.woff2" as="font">
+  <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-600.woff2" as="font">
+  <link rel="preload" href="fonts/Raleway/raleway-v18-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2" as="font">
+  <title>Document</title>
 </head>
 <body>
-    <%- include('blocks/header/index.ejs') %>
-    <%- include('blocks/hero/index.ejs') %>
+<%- include('blocks/header/index.ejs') %>
+<%- include('blocks/hero/index.ejs') %>
+<%- include('blocks/services/service.ejs')%>
 
 <script src="js/main.js"></script>
 <script src="js/vendor.js"></script>
