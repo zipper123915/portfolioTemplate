@@ -216,6 +216,10 @@ function scriptProduction() {
 function imagesDevelopment() {
     return src(path.src.img)
         .pipe(changed(path.build.img, { extension: '.{jpg|png|jpeg|gif|svg}' }))
+        .pipe(webp({
+            quality: 70
+        }))
+        .pipe(src(path.src.img))
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream());
 }

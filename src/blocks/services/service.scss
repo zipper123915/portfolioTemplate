@@ -28,6 +28,12 @@
     }
   }
 
+  &__icon {
+    img {
+      margin: 0 auto;
+    }
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;

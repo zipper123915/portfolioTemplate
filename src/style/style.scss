@@ -77,6 +77,9 @@
 @import "../blocks/hero/hero";
 @import "../blocks/button/button";
 @import "../blocks/services/service";
+@import "../blocks/intro/intro";
+@import "../blocks/offer/offer";
+@import "../blocks/portfolio/portfolio";
 
 * {
   box-sizing: border-box;
@@ -84,6 +87,11 @@
   margin: 0;
 }
 
-body {
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html {
   scroll-behavior: smooth;
 }

@@ -4,8 +4,9 @@
   right: 0;
   left: 0;
   z-index: 10;
-  padding-top: 40px;
+  padding: 20px 0;
   font-family: Montserrat, sans-serif;
+  background-color: rgba(86, 86, 86, 0.6);
 
   @media #{$tablet} {
     padding-top: 10px;

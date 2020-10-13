@@ -1,11 +1,11 @@
-<div class="hero">
+<section id="hero" class="hero">
   <div class="hero__overlay"></div>
   <div class="hero__inner">
     <div class="hero__slider">
       <div class="glide__track hero__track" data-glide-el="track">
         <ul class="glide__slides">
           <li class="glide__slide hero__slide">
-            <%- include('../button/button.ejs') %>
+            <%- include('../button/button.ejs', {text: "Get Started"}) %>
           </li>
           <li class="glide__slide hero__slide">1</li>
           <li class="glide__slide hero__slide">2</li>
@@ -32,4 +32,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
