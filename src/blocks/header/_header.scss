@@ -82,7 +82,7 @@
 
   &__nav-closer {
     display: none;
-    text-align: right;
+    margin-left: auto;
 
     @media #{$tablet} {
       display: block;

@@ -186,11 +186,17 @@ function testWebP(callback) {
 var navbar = document.querySelector('.header__navbar');
 var navbarCloser = document.querySelector('.header__nav-closer');
 var navbarOpener = document.querySelector('.header__nav-opener');
+var links = document.querySelectorAll('.header__link');
 navbarCloser.addEventListener('click', function () {
   navbar.classList.add('header__navbar--close');
 });
 navbarOpener.addEventListener('click', function () {
   navbar.classList.remove('header__navbar--close');
+});
+links.forEach(function (link) {
+  link.addEventListener('click', function () {
+    navbar.classList.add('header__navbar--close');
+  });
 });
 
 /***/ }),
@@ -291,6 +297,44 @@ services.forEach(function (service) {
 
 /***/ }),
 
+/***/ "./src/blocks/stat/stat.js":
+/*!*********************************!*\
+  !*** ./src/blocks/stat/stat.js ***!
+  \*********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/lib/anime.es.js");
+
+var stats = document.querySelectorAll('.stat');
+stats.forEach(function (stat) {
+  function scrollChaek() {
+    if (screen.height > stat.getBoundingClientRect().top) {
+      var number = parseInt(stat.querySelector('.stat__number').textContent);
+      var up = {
+        number1: 0
+      };
+      Object(animejs__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        targets: up,
+        number1: number,
+        round: 1,
+        duration: 5000,
+        easing: 'easeInOutExpo',
+        update: function update() {
+          stat.querySelector('.stat__number').textContent = up.number1;
+        }
+      });
+      window.removeEventListener('scroll', scrollChaek);
+    }
+  }
+
+  window.addEventListener('scroll', scrollChaek);
+});
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -309,6 +353,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_portfolio_portfolio__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_portfolio_portfolio__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../blocks/services/service */ "./src/blocks/services/service.js");
 /* harmony import */ var _blocks_intro_intro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../blocks/intro/intro */ "./src/blocks/intro/intro.js");
+/* harmony import */ var _blocks_stat_stat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../blocks/stat/stat */ "./src/blocks/stat/stat.js");
+
 
 
 

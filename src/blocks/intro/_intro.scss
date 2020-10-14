@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     user-select: text;
-    
+
     @media #{$tablet} {
       display: block;
     }
