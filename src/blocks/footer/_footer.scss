@@ -1,0 +1,30 @@
+.footer {
+  padding: 45px 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #555;
+  background-color: #111;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$mobile} {
+      display: block;
+      text-align: center;
+    }
+
+    @extend %container;
+  }
+
+  &__col {
+    @media #{$mobile} {
+      padding: 10px 0;
+    }
+  }
+}

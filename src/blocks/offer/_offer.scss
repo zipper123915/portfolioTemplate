@@ -1,5 +1,20 @@
 .offer {
-  height: 200px;
+  min-height: 200px;
   background-image: #{$main-gradient};
+
+  &--large {
+    min-height: initial;
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$mobile} {
+      display: block;
+    }
+    
+    @extend %container;
+  }
 }
- 
