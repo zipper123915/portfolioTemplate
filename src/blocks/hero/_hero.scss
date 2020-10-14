@@ -1,5 +1,7 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
+@use "../../style/helpers/mixins/adaptiv-font" as *;
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -71,25 +73,29 @@
   &__title {
     margin: 15px 0;
     font-family: Raleway, sans-serif;
-    font-size: 52px;
     font-weight: 600;
     color: #fff;
+    text-align: center;
+
+    @include adaptiv-font(56, 24);
   }
 
   &__sub-title {
     font-family: Raleway, sans-serif;
-    font-size: 36px;
     font-weight: 500;
     color: #fff;
+    text-align: center;
+
+    @include adaptiv-font(36, 16);
   }
 
   &__lead {
     font-family: Montserrat, sans-serif;
-    font-size: 18px;
     font-weight: 300;
-    text-align: center;
     color: #fff;
+    text-align: center;
 
+    @include adaptiv-font(18, 10);
   }
 
   &__bullet {
