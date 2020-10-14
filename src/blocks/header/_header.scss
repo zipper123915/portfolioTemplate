@@ -50,6 +50,7 @@
     color: $main-text-color;
     text-decoration: none;
     white-space: nowrap;
+    transition: 0.5s;
 
     &:not(:last-child) {
       margin-right: 3.8%;
@@ -57,6 +58,10 @@
       @media #{$tablet} {
         margin: 0 0 10px 0;
       }
+    }
+
+    &:hover {
+      color: $accent-color;
     }
   }
 
@@ -66,6 +71,13 @@
     @media #{$tablet} {
       display: block;
     }
+  }
+
+  &__logo {
+    font-family: Raleway, sans-serif;
+    font-size: 30px;
+    color: $main-text-color;
+    user-select: none;
   }
 
   &__nav-closer {

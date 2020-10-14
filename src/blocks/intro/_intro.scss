@@ -1,10 +1,29 @@
 .intro {
-  padding-top: 80px;
+  padding: 40px 0;
   text-align: center;
   background-color: $intro-bg;
 
+  &__item {
+    display: flex;
+    align-items: center;
+    user-select: text;
+    
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+
   &__inner {
     @extend %container;
+  }
+
+  &__content {
+    flex-basis: 50%;
+    margin-right: 5%;
+  }
+
+  &__img {
+    flex-basis: 45%;
   }
 
   &__title {
