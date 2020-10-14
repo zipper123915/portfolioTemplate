@@ -1,0 +1,43 @@
+.stat {
+  position: relative;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media #{$mobile} {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    content: '';
+    background-color: #fff;
+    transform: translateX(-50%);
+  }
+
+  &__name {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #c7b299;
+  }
+
+  &__icon {
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__number {
+    margin: 30px 0 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: #fff;
+  }
+}

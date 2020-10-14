@@ -17,21 +17,17 @@
 <body>
 <header class="header">
   <div class="header__inner">
-    <div class="header__logo"><img src="images/logo.png" alt="logo"></div>
+    <div class="header__logo">Андрей Белов</div>
     <nav class="header__navbar header__navbar--close">
-      <div class="header__link header__nav-closer">
+      <div class="header__nav-closer">
         <img src="images/cross.svg" alt="cross">
       </div>
-      <a href="#hero" class="header__link">Home</a>
-      <a href="#aboutus" class="header__link">About Us</a>
-      <a href="#portfolio" class="header__link">Portfolio</a>
-      <a href="" class="header__link">Features</a>
-      <a href="" class="header__link">Blog</a>
-      <a href="" class="header__link">Pricing</a>
-      <a href="" class="header__link">Shortcodes</a>
-      <a href="" class="header__link">Contact</a>
+      <a href="#hero" class="header__link">Начало</a>
+      <a href="#aboutus" class="header__link">Услуги</a>
+      <a href="#portfolio" class="header__link">Портфолио</a>
+      <a href="" class="header__link">Контакты</a>
     </nav>
-    <div class="header__link header__nav-opener">
+    <div class="header__nav-opener">
       <img src="images/menu.svg" alt="menu">
     </div>
   </div>
@@ -78,63 +74,116 @@
 
 <div id="aboutus" class="service">
   <div class="service__inner">
-    <div class="service__item">
+    <div data-index="0" class="service__item">
       <div class="service__icon">
         <img src="images/pen.png" alt="pen">
       </div>
-      <h3 class="service__title">Web & App Design</h3>
-      <p class="service__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-        mazim.</p>
+      <h3 class="service__title">Схемотехника</h3>
+      <p class="service__text">Сложная проектируемая схема может быть разбита иерархически или функцоанально</p>
     </div>
-    <div class="service__item">
+    <div data-index="1" class="service__item">
       <div class="service__icon">
         <img src="images/stack.png" alt="stack">
       </div>
-      <h3 class="service__title">Development</h3>
-      <p class="service__text">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-        laoreet.</p>
+      <h3 class="service__title">Печатные платы</h3>
+      <p class="service__text">Разработка многослойных печатных плат на основе уже готовых схем или с их заказом</p>
     </div>
-    <div class="service__item">
+    <div data-index="2" class="service__item">
       <div class="service__icon">
         <img src="images/costomizetion.png" alt="settings">
       </div>
-      <h3 class="service__title">Customization</h3>
-      <p class="service__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-        mazim.</p>
+      <h3 class="service__title">Устройство</h3>
+      <p class="service__text">Вместе с проектированием схемыи платы могут бть разработанны корпус или другие детали
+        устр-ва</p>
     </div>
-    <div class="service__item">
+    <div data-index="3" class="service__item">
       <div class="service__icon">
         <img src="images/folder.png" alt="folder">
       </div>
-      <h3 class="service__title">Marketing</h3>
-      <p class="service__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-        mazim.</p>
+      <h3 class="service__title">Документация</h3>
+      <p class="service__text">Вывод любого типа документации по проекту - от BOM до Gerber и PDF версии схем, плат и
+        чертежей</p>
     </div>
   </div>
 </div>
 
 <section class="intro">
   <div class="intro__inner">
-    <h1 class="intro__title">Waxom is Realization of your Ideas.</h1>
-    <p class="intro__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est
-      etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-    <div class="intro__img"><img src="images/intro-img.png" alt="intro"></div>
+    <div class="glide intro__slider">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+          <div class="glide__slide intro__item">
+            <div class="intro__content">
+              <h1 class="intro__title">Трассировка многослойных печатных плат</h1>
+              <p class="intro__text">В зависимости от уровня сложности, рабочей частоты схемы, габаритов и стоимости,
+                платы
+                могут быть однослойные, двухслойные и четырехслойные. С установкой компонентов как с одной так и с двух
+                сторон.
+                Монтаж компонентов может быть поверхностным и сквозным в зависимости от характеристик платы. Подготовка
+                полного
+                пакета документации (BOM, Gerber, CPL, PNP) для производства плат и расстановки компонентов. Также можно
+                выводить трехмерные модели платы с компонентами для фотореалистичных изображений.
+
+                Комментарий: Слева представлен стек четырехслойной платы и ее трехмерная модель.</p>
+            </div>
+            <div class="intro__img"><img src="images/intro-img.png" alt="intro"></div>
+          </div>
+          <div class="glide__slide intro__item">
+            <div class="intro__content">
+              <h1 class="intro__title">Трассировка многослойных печатных плат</h1>
+              <p class="intro__text">В зависимости от уровня сложности, рабочей частоты схемы, габаритов и стоимости,
+                платы
+                могут быть однослойные, двухслойные и четырехслойные. С установкой компонентов как с одной так и с двух
+                сторон.
+                Монтаж компонентов может быть поверхностным и сквозным в зависимости от характеристик платы. Подготовка
+                полного
+                пакета документации (BOM, Gerber, CPL, PNP) для производства плат и расстановки компонентов. Также можно
+                выводить трехмерные модели платы с компонентами для фотореалистичных изображений.
+
+                Комментарий: Слева представлен стек четырехслойной платы и ее трехмерная модель.</p>
+            </div>
+            <div class="intro__img"><img src="images/intro-img.png" alt="intro"></div>
+          </div>
+          <div class="glide__slide intro__item">
+            <div class="intro__content">
+              <h1 class="intro__title">Трассировка многослойных печатных плат</h1>
+              <p class="intro__text">В зависимости от уровня сложности, рабочей частоты схемы, габаритов и стоимости,
+                платы
+                могут быть однослойные, двухслойные и четырехслойные. С установкой компонентов как с одной так и с двух
+                сторон.
+                Монтаж компонентов может быть поверхностным и сквозным в зависимости от характеристик платы. Подготовка
+                полного
+                пакета документации (BOM, Gerber, CPL, PNP) для производства плат и расстановки компонентов. Также можно
+                выводить трехмерные модели платы с компонентами для фотореалистичных изображений.
+
+                Комментарий: Слева представлен стек четырехслойной платы и ее трехмерная модель.</p>
+            </div>
+            <div class="intro__img"><img src="images/intro-img.png" alt="intro"></div>
+          </div>
+          <div class="glide__slide intro__item">
+            <div class="intro__content">
+              <h1 class="intro__title">Трассировка многослойных печатных плат</h1>
+              <p class="intro__text">В зависимости от уровня сложности, рабочей частоты схемы, габаритов и стоимости,
+                платы
+                могут быть однослойные, двухслойные и четырехслойные. С установкой компонентов как с одной так и с двух
+                сторон.
+                Монтаж компонентов может быть поверхностным и сквозным в зависимости от характеристик платы. Подготовка
+                полного
+                пакета документации (BOM, Gerber, CPL, PNP) для производства плат и расстановки компонентов. Также можно
+                выводить трехмерные модели платы с компонентами для фотореалистичных изображений.
+
+                Комментарий: Слева представлен стек четырехслойной платы и ее трехмерная модель.</p>
+            </div>
+            <div class="intro__img"><img src="images/intro-img.png" alt="intro"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="offer">
-  <div class="offer__inner">
-    <div class="offer__content">
-      <h2 class="offer__title">Waxom Multipurpose WordPress Theme</h2>
-      <p class="offer__lead">Don't Forget to Rate the Template. Thanks so much!</p>
-    </div>
-    <div class="offer__button">
-      <button class="button">
-  Purchase Now
-</button>
 
-    </div>
-  </div>
 </section>
 
 <section id="portfolio" class="portfolio">
@@ -233,8 +282,64 @@
   </div>
 </section>
 
+<section class="offer offer--large">
+  <div class="offer__inner">
+    <div class="stat">
+  <div class="stat__icon">
+    <img src="images/icon-1.png" alt="icon">
+  </div>
+  <div class="stat__number">3587</div>
+  <div class="stat__name">Satisfied Clients</div>
+</div>
 
-<script src="js/main.js"></script>
-<script src="js/vendor.js"></script>
+    <div class="stat">
+  <div class="stat__icon">
+    <img src="images/icon-1.png" alt="icon">
+  </div>
+  <div class="stat__number">3587</div>
+  <div class="stat__name">Satisfied Clients</div>
+</div>
+
+    <div class="stat">
+  <div class="stat__icon">
+    <img src="images/icon-1.png" alt="icon">
+  </div>
+  <div class="stat__number">3587</div>
+  <div class="stat__name">Satisfied Clients</div>
+</div>
+
+    <div class="stat">
+  <div class="stat__icon">
+    <img src="images/icon-1.png" alt="icon">
+  </div>
+  <div class="stat__number">3587</div>
+  <div class="stat__name">Satisfied Clients</div>
+</div>
+
+    <div class="stat">
+  <div class="stat__icon">
+    <img src="images/icon-1.png" alt="icon">
+  </div>
+  <div class="stat__number">3587</div>
+  <div class="stat__name">Satisfied Clients</div>
+</div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__col">
+      <div class="footer__item">Telegram: <a class="footer__link" href="">@AndrWhite</a></div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__item">Designed by ThemeFire | Only on Envato Market</div>
+    </div>
+  </div>
+</footer>
+
+
+<script defer src="js/main.js"></script>
+<script defer src="js/vendor.js"></script>
 </body>
 </html>
