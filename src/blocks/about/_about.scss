@@ -1,0 +1,30 @@
+.about {
+  padding: 80px 0;
+
+  &__inner {
+    @extend %container;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: Raleway, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    color: #555;
+    letter-spacing: 1px;
+
+    @media #{$mobile} {
+      line-height: 1.5;
+      text-align: justify;
+    }
+  }
+}
