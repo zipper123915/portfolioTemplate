@@ -1,13 +1,46 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-@use "../../style/helpers/mixins/adaptiv-font" as *;
+@import "../../style/helpers/mixins/adaptiv-font";
 
 .hero {
   position: relative;
   min-height: 100vh;
   font-family: Raleway, sans-serif;
   font-weight: 600;
-  background: fixed no-repeat center/cover;
+  background: fixed no-repeat top/cover;
+
+  &--slider {
+    min-height: unset;
+    background: none !important;
+
+    @extend %container;
+
+    .hero__slide {
+      height: unset;
+    }
+  }
+
+  picture {
+    width: 100%;
+
+    .hero__image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+
+  //&__track {
+  //  position: relative;
+  //  z-index: 10;
+  //}
 
   &__overlay {
     position: absolute;
@@ -15,11 +48,14 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 5;
     background-color: #000;
     opacity: 0.5;
   }
 
   &__slide {
+    position: relative;
+    z-index: 6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +68,7 @@
     position: absolute;
     top: 50%;
     left: 7%;
+    z-index: 10;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -52,10 +89,16 @@
     }
   }
 
+  &__image {
+    position: relative;
+    z-index: 3;
+  }
+
   &__pagination {
     position: absolute;
     bottom: 40px;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
   }
 
@@ -71,6 +114,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 10;
     margin: 15px 0;
     font-family: Raleway, sans-serif;
     font-weight: 600;
@@ -81,6 +126,8 @@
   }
 
   &__sub-title {
+    position: relative;
+    z-index: 10;
     font-family: Raleway, sans-serif;
     font-weight: 500;
     color: #fff;
@@ -90,6 +137,8 @@
   }
 
   &__lead {
+    position: relative;
+    z-index: 10;
     font-family: Montserrat, sans-serif;
     font-weight: 300;
     color: #fff;

@@ -27,6 +27,7 @@
 
   &__tabs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     overflow-x: auto;
     font-family: Montserrat, sans-serif;
@@ -42,6 +43,11 @@
 
     &:not(:last-child) {
       margin-right: 1%;
+
+      @media #{$mobile} {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
 
     &--active {
@@ -53,6 +59,8 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
     margin-top: 40px;
   }
 
@@ -97,6 +105,8 @@
 
     img {
       width: 100%;
+      object-position: top;
+      max-height: 225px;
       object-fit: cover;
     }
   }
@@ -135,6 +145,7 @@
   &__card {
     flex-basis: 31%;
     flex-shrink: 1;
+    min-width: 320px;
 
     &:not(:nth-child(3n + 3)) {
       margin-right: 2.5%;

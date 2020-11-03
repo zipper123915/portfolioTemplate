@@ -5,6 +5,7 @@
 
   &__item {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     user-select: text;
 
@@ -19,7 +20,7 @@
 
   &__content {
     flex-basis: 50%;
-    margin-right: 5%;
+    margin-left: 5%;
   }
 
   &__img {
@@ -35,8 +36,8 @@
 
   &__text {
     margin: 25px 0 40px;
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
     font-weight: 300;
     color: #8c8c8c;
 

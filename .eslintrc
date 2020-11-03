@@ -8,6 +8,7 @@
     "semi": "off",
     "template-curly-spacing": "off",
     "no-trailing-spaces": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-undef": "off"
   }
 }
